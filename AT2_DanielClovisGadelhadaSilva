@@ -1,0 +1,60 @@
+import java.util.Objects;
+
+public class myCircle {
+        private myPoint center;
+        private int radius = 1;
+
+        public myCircle (int x, int y, int radius){
+            radius = radius;
+            x=0;
+            y=0;
+        }
+        public myCircle (myPoint center,int radius){
+            center= center;
+            radius=radius;
+        }
+
+
+    public myPoint getCenter() {
+        return center;
+    }
+
+    public void setCenter(myPoint center) {
+        this.center = center;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+    public void setCenterXY(int x, int y){
+    }
+    public double getArea()
+    {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        myCircle myCircle = (myCircle) o;
+        return radius == myCircle.radius && center.equals(myCircle.center);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(center, radius);
+    }
+
+    @Override
+    public String toString() {
+        return "myCircle{" +
+                "center=" + center +
+                ", radius=" + radius +
+                '}';
+    }
+}

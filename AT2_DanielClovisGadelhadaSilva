@@ -1,0 +1,13 @@
+public class testeMyCircle {
+    public static void main(String[] args) {
+        myCircle circle1 = new myCircle(1,2,3);
+        myCircle circle2 = new myCircle(new myPoint(3,6), 7);
+        circle1.setCenterXY(2,6);
+        circle1.setRadius(6);
+        System.out.println(circle1.toString());;
+        circle2.setCenterXY(12,122);
+        circle2.setRadius(67);
+        System.out.println(circle2.toString());
+        System.out.println(circle1.equals(circle2));
+    }
+}

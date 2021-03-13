@@ -1,0 +1,27 @@
+import java.util.Objects;
+import java.lang.Object;
+
+public class testeMyPoint {
+    public static void main(String[] args) {
+        myPoint p1 = new myPoint();
+        p1.setX(7);
+        p1.setY(8);
+        System.out.println(p1.toString());
+        p1.setXY(3, 4);
+        System.out.println(p1.toString());
+
+        myPoint p2 = new myPoint();
+        p2.setX(3);
+        p2.setY(5);
+        System.out.println(p2.toString());
+        p2.setXY(9,0);
+        System.out.println(p1.toString());
+        System.out.println(p2.toString());
+        System.out.println("A distancia do ponto 1 é: " + p1.distance(2,3));
+        System.out.println("A distancia do ponto 2 é: " + p2.distance(1,4));
+        System.out.println("A distancia entre o p1 e p2 é: " + p1.distance(p2)+ " com resultado booleano = " + p1.equals(p2));
+        System.out.println("A distancia entre o p2 e p1 é: " + + p2.distance(p1) + " com resultado booleano = " + p2.equals(p1));
+        System.out.println(p1.distance(p2));
+        ;
+    }
+}
